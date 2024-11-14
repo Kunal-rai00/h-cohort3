@@ -5,7 +5,17 @@
 */
 
 function isAnagram(str1, str2) {
-
+  if (str1.length !== str2.length){
+    return false
+  }else{
+    let modifiedStr1 = str1.toLowerCase().split("").sort().join("");
+    let modifiedStr2 = str2.toLowerCase().split("").sort().join("");
+    return modifiedStr1 === modifiedStr2
+  }
+ 
+ 
 }
 
+
+console.log(isAnagram("kunal", "ankit"))
 module.exports = isAnagram;
